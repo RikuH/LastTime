@@ -1,116 +1,320 @@
 fileFormatVersion: 2
 guid: 9e4e13fccab7257419958869ff9397c4
-timeCreated: 1574358367
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: mixamorig_Head
-    100004: mixamorig_HeadTop_End
-    100006: mixamorig_Hips
-    100008: mixamorig_LeftArm
-    100010: mixamorig_LeftFoot
-    100012: mixamorig_LeftForeArm
-    100014: mixamorig_LeftHand
-    100016: mixamorig_LeftHandIndex1
-    100018: mixamorig_LeftHandIndex2
-    100020: mixamorig_LeftHandIndex3
-    100022: mixamorig_LeftHandIndex4
-    100024: mixamorig_LeftHandRing1
-    100026: mixamorig_LeftHandRing2
-    100028: mixamorig_LeftHandRing3
-    100030: mixamorig_LeftHandRing4
-    100032: mixamorig_LeftHandThumb1
-    100034: mixamorig_LeftHandThumb2
-    100036: mixamorig_LeftHandThumb3
-    100038: mixamorig_LeftHandThumb4
-    100040: mixamorig_LeftLeg
-    100042: mixamorig_LeftShoulder
-    100044: mixamorig_LeftToe_End
-    100046: mixamorig_LeftToeBase
-    100048: mixamorig_LeftUpLeg
-    100050: mixamorig_Neck
-    100052: mixamorig_RightArm
-    100054: mixamorig_RightFoot
-    100056: mixamorig_RightForeArm
-    100058: mixamorig_RightHand
-    100060: mixamorig_RightHandIndex1
-    100062: mixamorig_RightHandIndex2
-    100064: mixamorig_RightHandIndex3
-    100066: mixamorig_RightHandIndex4
-    100068: mixamorig_RightHandRing1
-    100070: mixamorig_RightHandRing2
-    100072: mixamorig_RightHandRing3
-    100074: mixamorig_RightHandRing4
-    100076: mixamorig_RightHandThumb1
-    100078: mixamorig_RightHandThumb2
-    100080: mixamorig_RightHandThumb3
-    100082: mixamorig_RightHandThumb4
-    100084: mixamorig_RightLeg
-    100086: mixamorig_RightShoulder
-    100088: mixamorig_RightToe_End
-    100090: mixamorig_RightToeBase
-    100092: mixamorig_RightUpLeg
-    100094: mixamorig_Spine
-    100096: mixamorig_Spine1
-    100098: mixamorig_Spine2
-    400000: //RootNode
-    400002: mixamorig_Head
-    400004: mixamorig_HeadTop_End
-    400006: mixamorig_Hips
-    400008: mixamorig_LeftArm
-    400010: mixamorig_LeftFoot
-    400012: mixamorig_LeftForeArm
-    400014: mixamorig_LeftHand
-    400016: mixamorig_LeftHandIndex1
-    400018: mixamorig_LeftHandIndex2
-    400020: mixamorig_LeftHandIndex3
-    400022: mixamorig_LeftHandIndex4
-    400024: mixamorig_LeftHandRing1
-    400026: mixamorig_LeftHandRing2
-    400028: mixamorig_LeftHandRing3
-    400030: mixamorig_LeftHandRing4
-    400032: mixamorig_LeftHandThumb1
-    400034: mixamorig_LeftHandThumb2
-    400036: mixamorig_LeftHandThumb3
-    400038: mixamorig_LeftHandThumb4
-    400040: mixamorig_LeftLeg
-    400042: mixamorig_LeftShoulder
-    400044: mixamorig_LeftToe_End
-    400046: mixamorig_LeftToeBase
-    400048: mixamorig_LeftUpLeg
-    400050: mixamorig_Neck
-    400052: mixamorig_RightArm
-    400054: mixamorig_RightFoot
-    400056: mixamorig_RightForeArm
-    400058: mixamorig_RightHand
-    400060: mixamorig_RightHandIndex1
-    400062: mixamorig_RightHandIndex2
-    400064: mixamorig_RightHandIndex3
-    400066: mixamorig_RightHandIndex4
-    400068: mixamorig_RightHandRing1
-    400070: mixamorig_RightHandRing2
-    400072: mixamorig_RightHandRing3
-    400074: mixamorig_RightHandRing4
-    400076: mixamorig_RightHandThumb1
-    400078: mixamorig_RightHandThumb2
-    400080: mixamorig_RightHandThumb3
-    400082: mixamorig_RightHandThumb4
-    400084: mixamorig_RightLeg
-    400086: mixamorig_RightShoulder
-    400088: mixamorig_RightToe_End
-    400090: mixamorig_RightToeBase
-    400092: mixamorig_RightUpLeg
-    400094: mixamorig_Spine
-    400096: mixamorig_Spine1
-    400098: mixamorig_Spine2
-    7400000: CINEMA_4D_Main
-    9500000: //RootNode
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: mixamorig_Head
+  - first:
+      1: 100004
+    second: mixamorig_HeadTop_End
+  - first:
+      1: 100006
+    second: mixamorig_Hips
+  - first:
+      1: 100008
+    second: mixamorig_LeftArm
+  - first:
+      1: 100010
+    second: mixamorig_LeftFoot
+  - first:
+      1: 100012
+    second: mixamorig_LeftForeArm
+  - first:
+      1: 100014
+    second: mixamorig_LeftHand
+  - first:
+      1: 100016
+    second: mixamorig_LeftHandIndex1
+  - first:
+      1: 100018
+    second: mixamorig_LeftHandIndex2
+  - first:
+      1: 100020
+    second: mixamorig_LeftHandIndex3
+  - first:
+      1: 100022
+    second: mixamorig_LeftHandIndex4
+  - first:
+      1: 100024
+    second: mixamorig_LeftHandRing1
+  - first:
+      1: 100026
+    second: mixamorig_LeftHandRing2
+  - first:
+      1: 100028
+    second: mixamorig_LeftHandRing3
+  - first:
+      1: 100030
+    second: mixamorig_LeftHandRing4
+  - first:
+      1: 100032
+    second: mixamorig_LeftHandThumb1
+  - first:
+      1: 100034
+    second: mixamorig_LeftHandThumb2
+  - first:
+      1: 100036
+    second: mixamorig_LeftHandThumb3
+  - first:
+      1: 100038
+    second: mixamorig_LeftHandThumb4
+  - first:
+      1: 100040
+    second: mixamorig_LeftLeg
+  - first:
+      1: 100042
+    second: mixamorig_LeftShoulder
+  - first:
+      1: 100044
+    second: mixamorig_LeftToe_End
+  - first:
+      1: 100046
+    second: mixamorig_LeftToeBase
+  - first:
+      1: 100048
+    second: mixamorig_LeftUpLeg
+  - first:
+      1: 100050
+    second: mixamorig_Neck
+  - first:
+      1: 100052
+    second: mixamorig_RightArm
+  - first:
+      1: 100054
+    second: mixamorig_RightFoot
+  - first:
+      1: 100056
+    second: mixamorig_RightForeArm
+  - first:
+      1: 100058
+    second: mixamorig_RightHand
+  - first:
+      1: 100060
+    second: mixamorig_RightHandIndex1
+  - first:
+      1: 100062
+    second: mixamorig_RightHandIndex2
+  - first:
+      1: 100064
+    second: mixamorig_RightHandIndex3
+  - first:
+      1: 100066
+    second: mixamorig_RightHandIndex4
+  - first:
+      1: 100068
+    second: mixamorig_RightHandRing1
+  - first:
+      1: 100070
+    second: mixamorig_RightHandRing2
+  - first:
+      1: 100072
+    second: mixamorig_RightHandRing3
+  - first:
+      1: 100074
+    second: mixamorig_RightHandRing4
+  - first:
+      1: 100076
+    second: mixamorig_RightHandThumb1
+  - first:
+      1: 100078
+    second: mixamorig_RightHandThumb2
+  - first:
+      1: 100080
+    second: mixamorig_RightHandThumb3
+  - first:
+      1: 100082
+    second: mixamorig_RightHandThumb4
+  - first:
+      1: 100084
+    second: mixamorig_RightLeg
+  - first:
+      1: 100086
+    second: mixamorig_RightShoulder
+  - first:
+      1: 100088
+    second: mixamorig_RightToe_End
+  - first:
+      1: 100090
+    second: mixamorig_RightToeBase
+  - first:
+      1: 100092
+    second: mixamorig_RightUpLeg
+  - first:
+      1: 100094
+    second: mixamorig_Spine
+  - first:
+      1: 100096
+    second: mixamorig_Spine1
+  - first:
+      1: 100098
+    second: mixamorig_Spine2
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: mixamorig_Head
+  - first:
+      4: 400004
+    second: mixamorig_HeadTop_End
+  - first:
+      4: 400006
+    second: mixamorig_Hips
+  - first:
+      4: 400008
+    second: mixamorig_LeftArm
+  - first:
+      4: 400010
+    second: mixamorig_LeftFoot
+  - first:
+      4: 400012
+    second: mixamorig_LeftForeArm
+  - first:
+      4: 400014
+    second: mixamorig_LeftHand
+  - first:
+      4: 400016
+    second: mixamorig_LeftHandIndex1
+  - first:
+      4: 400018
+    second: mixamorig_LeftHandIndex2
+  - first:
+      4: 400020
+    second: mixamorig_LeftHandIndex3
+  - first:
+      4: 400022
+    second: mixamorig_LeftHandIndex4
+  - first:
+      4: 400024
+    second: mixamorig_LeftHandRing1
+  - first:
+      4: 400026
+    second: mixamorig_LeftHandRing2
+  - first:
+      4: 400028
+    second: mixamorig_LeftHandRing3
+  - first:
+      4: 400030
+    second: mixamorig_LeftHandRing4
+  - first:
+      4: 400032
+    second: mixamorig_LeftHandThumb1
+  - first:
+      4: 400034
+    second: mixamorig_LeftHandThumb2
+  - first:
+      4: 400036
+    second: mixamorig_LeftHandThumb3
+  - first:
+      4: 400038
+    second: mixamorig_LeftHandThumb4
+  - first:
+      4: 400040
+    second: mixamorig_LeftLeg
+  - first:
+      4: 400042
+    second: mixamorig_LeftShoulder
+  - first:
+      4: 400044
+    second: mixamorig_LeftToe_End
+  - first:
+      4: 400046
+    second: mixamorig_LeftToeBase
+  - first:
+      4: 400048
+    second: mixamorig_LeftUpLeg
+  - first:
+      4: 400050
+    second: mixamorig_Neck
+  - first:
+      4: 400052
+    second: mixamorig_RightArm
+  - first:
+      4: 400054
+    second: mixamorig_RightFoot
+  - first:
+      4: 400056
+    second: mixamorig_RightForeArm
+  - first:
+      4: 400058
+    second: mixamorig_RightHand
+  - first:
+      4: 400060
+    second: mixamorig_RightHandIndex1
+  - first:
+      4: 400062
+    second: mixamorig_RightHandIndex2
+  - first:
+      4: 400064
+    second: mixamorig_RightHandIndex3
+  - first:
+      4: 400066
+    second: mixamorig_RightHandIndex4
+  - first:
+      4: 400068
+    second: mixamorig_RightHandRing1
+  - first:
+      4: 400070
+    second: mixamorig_RightHandRing2
+  - first:
+      4: 400072
+    second: mixamorig_RightHandRing3
+  - first:
+      4: 400074
+    second: mixamorig_RightHandRing4
+  - first:
+      4: 400076
+    second: mixamorig_RightHandThumb1
+  - first:
+      4: 400078
+    second: mixamorig_RightHandThumb2
+  - first:
+      4: 400080
+    second: mixamorig_RightHandThumb3
+  - first:
+      4: 400082
+    second: mixamorig_RightHandThumb4
+  - first:
+      4: 400084
+    second: mixamorig_RightLeg
+  - first:
+      4: 400086
+    second: mixamorig_RightShoulder
+  - first:
+      4: 400088
+    second: mixamorig_RightToe_End
+  - first:
+      4: 400090
+    second: mixamorig_RightToeBase
+  - first:
+      4: 400092
+    second: mixamorig_RightUpLeg
+  - first:
+      4: 400094
+    second: mixamorig_Spine
+  - first:
+      4: 400096
+    second: mixamorig_Spine1
+  - first:
+      4: 400098
+    second: mixamorig_Spine2
+  - first:
+      74: 7400000
+    second: CINEMA_4D_Main
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -123,26 +327,69 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: CINEMA_4D_Main
+      takeName: CINEMA_4D_Main
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 65
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -152,10 +399,14 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -165,14 +416,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
