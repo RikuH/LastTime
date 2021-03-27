@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterAnimation : MonoBehaviour
 {
-    Animator anim;
+    public Animator anim;
 
     Vector3 currentPosition;
     Vector3 lastPosition;
@@ -25,12 +25,10 @@ public class CharacterAnimation : MonoBehaviour
         currentPosition = transform.position;
         if(currentPosition != lastPosition)
         {
-            Debug.Log("Kavelee");
             anim.SetBool("isWalking", true);
         }
         else
         {
-            Debug.Log("ei Kavelee");
             anim.SetBool("isWalking", false);
 
         }
@@ -39,12 +37,12 @@ public class CharacterAnimation : MonoBehaviour
         if (isCrouching)
         {
             anim.SetBool("isCoruching", true);
-            GameObject.Find("mixamorig_Neck").GetComponent<MouseLook>().mouseEnabled = false;
+            GameObject.FindGameObjectWithTag("Neck").GetComponent<MouseLook>().mouseEnabled = false;
         }
         else
         {
             anim.SetBool("isCoruching", false);
-            GameObject.Find("mixamorig_Neck").GetComponent<MouseLook>().mouseEnabled = true;
+            GameObject.FindGameObjectWithTag("Neck").GetComponent<MouseLook>().mouseEnabled = true;
 
         }
     }
