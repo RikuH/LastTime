@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6794089039471263503}
   - component: {fileID: 8870872050586851774}
   m_Layer: 10
-  m_Name: Sphere
+  m_Name: GreenSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8870872050586851775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -143.5, y: 4.96, z: -102.42}
-  m_LocalScale: {x: 6.5535817, y: 6.5535817, z: 6.5535817}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

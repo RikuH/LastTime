@@ -22,54 +22,69 @@ public class NPC_Controller : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-
-        int rnd = Random.Range(3, 15);
-        Vector3 newDestination = new Vector3(Steps[stepsIndex].position.x + rnd, 0, Steps[stepsIndex].position.z + rnd);
-        agent.SetDestination(newDestination);
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        float distance = Vector3.Distance(Player.transform.position, transform.position);
-        if (!isGeneratingNewPath)
+        if(gameObject.name == "Birgit")
         {
-            if (distance < 2)
+            BirgitFunction();
+        }
+        if(gameObject.name == "James")
+        {
+
+        }
+
+
+    void BirgitFunction()
+    {
+
+            float distance = Vector3.Distance(Player.transform.position, transform.position);
+            if (!isGeneratingNewPath)
             {
-                if (Player.gameObject.GetComponent<CharacterAnimation>().isCrouching == true)
+                if (distance < 2)
                 {
-                    GetComponent<CharacterAnimation>().isCrouching = true;
-                }
-                else
-                {
-                    GetComponent<CharacterAnimation>().isCrouching = false;
-                }
-        
-                //Generating new destination
-                isGeneratingNewPath = true;
-                Debug.Log("Generating new destination to " + gameObject.name);
-
-                if (doOnce)
-                {
-                    if (agent.remainingDistance == 0)
+                    if (Player.gameObject.GetComponent<CharacterAnimation>().isCrouching == true)
                     {
-                        Debug.Log("täällä");
-                        stepsIndex++;
-                        Debug.Log(gameObject.name + " : " + stepsIndex);
-                        doOnce = false;
+                        GetComponent<CharacterAnimation>().isCrouching = true;
                     }
-                }
+                    else
+                    {
+                        GetComponent<CharacterAnimation>().isCrouching = false;
+                    }
 
-                int rnd = Random.Range(3, 15);
-        
-                StartCoroutine(WaitAMoment(rnd, stepsIndex));
+                    //Generating new destination
+                    isGeneratingNewPath = true;
+                    Debug.Log("Generating new destination to " + gameObject.name);
+
+                    if (doOnce)
+                    {
+                        if (agent.remainingDistance == 0)
+                        {
+                            Debug.Log("täällä");
+                            stepsIndex++;
+                            Debug.Log(gameObject.name + " : " + stepsIndex);
+                            doOnce = false;
+                        }
+                    }
+
+                    int rnd = Random.Range(3, 15);
+
+                    StartCoroutine(WaitAMoment(rnd, stepsIndex));
+                }
+            }
+            else
+            {
+                isGeneratingNewPath = false;
             }
         }
-        else
-        {
-            isGeneratingNewPath = false;
-        }
+
+    }
+    void JamesFunction()
+    {
+
     }
 
     IEnumerator WaitAMoment(int rnd, int i)
@@ -83,10 +98,17 @@ public class NPC_Controller : MonoBehaviour
             Vector3 newDestination = new Vector3(Steps[i].position.x + rnd , 0, Steps[i].position.z + rnd);
             agent.SetDestination(newDestination);
             doOnce = true;
+
+            if (Player.GetComponent<Battery>().batteryIsCharging == true)
+            {
+                Player.GetComponent<Battery>().batteryIsCharging = false;
+                Player.GetComponent<Battery>().batteryIsDraining = true;
+            }
         }
         else
         {
             Debug.Log("NPC jäi odottamaan");
+            Player.GetComponent<Battery>().batteryIsCharging = true;
         }
     }
 
