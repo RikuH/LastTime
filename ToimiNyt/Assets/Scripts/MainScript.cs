@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainScript : MonoBehaviour
@@ -71,13 +72,13 @@ public class MainScript : MonoBehaviour
 
     IEnumerator DialogyDealay()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
 
         Debug.Log("Aloita");
-        //SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(1);
     }
 
-    float TextDelay = 0.1f;
+    float TextDelay = 0.05f;
 
     int lineIndex = 0;
 
@@ -101,12 +102,15 @@ public class MainScript : MonoBehaviour
     public Text Liibalaaba;
     public IEnumerator writeText()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.4f);
         string fullText = "";
         for (int a = 0; a <= lineIndex; a++)
         {
             if (lineIndex == 0)
+            {
                 fullText = textOne;
+                yield return new WaitForSeconds(1.5f);
+            }
             else if (lineIndex == 1)
                 fullText = textTwo;
             else if (lineIndex == 2)
@@ -131,7 +135,10 @@ public class MainScript : MonoBehaviour
             else if (lineIndex == 10)
                 fullText = textEleven;
             else if (lineIndex == 11)
+            {
                 fullText = textTwelve;
+                yield return new WaitForSeconds(1.5f);
+            }
             else if (lineIndex == 12)
                 fullText = textThirdtheen;
             else if (lineIndex == 13)
