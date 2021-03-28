@@ -38,23 +38,23 @@ public class PrologueInGame : MonoBehaviour
         tekstiJuttu.SetActive(false);
     }
 
-    float TextDelay = 0.1f;
+    float TextDelay = 0.05f;
 
     int lineIndex = 0;
 
-    string textOne = "James: In your hand is monitor where you can see the locate of the signal. Got it?";
-    string textTwo = "Birgit: In your helmet you can see your suit battery.";
-    string textThree = "Birgit: You can charge your suit by coming to me or to James.";
-    string textFour = "Birgit: If your suit battery runs out of power you have 10 seconds to charge your suit or you will freeze to death.";
-    string textFive = "Birgit: Understood?";
-    string textSix = "James: Okey, let's find that source.";
+    string textOne = "James: You have a monitor in your hand where you can locate the signal. Got it?";
+    string textTwo = "James: In your helmet you can see your suit battery.";
+    string textThree = "James: You can charge your suit by crouching close to Birgit.";
+    string textFour = "James: If your suit battery runs out of power you have 10 seconds to charge your suit or you will freeze to death.";
+    string textFive = "James: Understood?";
+    string textSix = "James: Okey, go find that source. I wait here.";
 
     string currentText = "";
 
     public Text Liibalaaba;
     public IEnumerator writeText()
     {
-
+        GameObject.Find("DialogyText").GetComponent<AudioSource>().Play();
         string fullText = "";
         for (int a = 0; a <= lineIndex; a++)
         {
@@ -65,13 +65,14 @@ public class PrologueInGame : MonoBehaviour
             else if (lineIndex == 2)
                 fullText = textThree;
             else if (lineIndex == 3)
+            {
                 fullText = textFour;
+                yield return new WaitForSeconds(1.5f);
+            }
             else if (lineIndex == 4)
                 fullText = textFive;
             else if (lineIndex == 5)
                 fullText = textSix;
-
-
 
             //Debug.Log(lineIndex);
             for (int i = 0; i <= fullText.Length; i++)

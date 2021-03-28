@@ -101,7 +101,7 @@ public class MainScript : MonoBehaviour
     public Text Liibalaaba;
     public IEnumerator writeText()
     {
-
+        yield return new WaitForSeconds(2);
         string fullText = "";
         for (int a = 0; a <= lineIndex; a++)
         {
@@ -147,7 +147,7 @@ public class MainScript : MonoBehaviour
                 yield return new WaitForSeconds(TextDelay);
             }
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1);
             if (lineIndex < 13)
             {
                 lineIndex++;
