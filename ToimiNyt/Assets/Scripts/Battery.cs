@@ -17,6 +17,10 @@ public class Battery : MonoBehaviour
     public Sprite[] BatteryImages;
     public Image bImage;
     int BatteryImageIndex = 0;
+
+    public GameObject Camera;
+
+    bool areYouDead = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,13 +39,13 @@ public class Battery : MonoBehaviour
 
         if (batteryIsDraining && BatteryCharge >= 0)
         {
-            BatteryCharge -= 0.005f;
+            BatteryCharge -= 0.5f;
             RedValue += 0.005f;
         }
 
         BatteryPercentage = (int)BatteryCharge;
         BatteryText.text = BatteryPercentage.ToString() + "%";
-        BatteryText.GetComponent<Text>().color = new Color(RedValue / 2 / 100, BatteryCharge / 2 / 100, BatteryCharge / 100, 1);
+        BatteryText.GetComponent<Text>().color = new Color(RedValue / 2 / 100, BatteryCharge / 2 / 100, BatteryCharge / 100, 0.7f);
   
 
         if (BatteryCharge > 75)
@@ -53,9 +57,43 @@ public class Battery : MonoBehaviour
         else if (BatteryCharge > 10)
             BatteryImageIndex = 3;
         else if (BatteryCharge < 2)
+        {
             BatteryImageIndex = 4;
+
+            if (Camera.GetComponent<FrostEffect>().FrostAmount < 1)
+                Camera.GetComponent<FrostEffect>().FrostAmount += 0.0005f;
+
+        }
+
+
+        if(BatteryCharge <= 0)
+        {
+            areYouDead = true;
+            StartCoroutine(FinalCountdown());
+        }
+        if(BatteryCharge > 0)
+            areYouDead = false;
+
+        if(BatteryCharge > 2)
+        {
+            if(Camera.GetComponent<FrostEffect>().FrostAmount > 0)
+                Camera.GetComponent<FrostEffect>().FrostAmount -= 0.0005f;
+        }
+
 
 
         bImage.sprite = BatteryImages[BatteryImageIndex];
     }
+
+    IEnumerator FinalCountdown()
+    {
+        yield return new WaitForSeconds(10);
+        if (areYouDead)
+        {
+            Debug.Log("Dead");
+        }
+        else
+            Debug.Log("Alive");
+    }
+
 }

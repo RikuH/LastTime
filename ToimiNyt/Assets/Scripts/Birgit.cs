@@ -12,6 +12,7 @@ public class Birgit : MonoBehaviour
     int stepIndex = 0;
 
     bool isGenerating = false;
+    bool isCrouched = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +25,12 @@ public class Birgit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(agent.remainingDistance == 0)
+        float distance = Vector3.Distance(transform.position, Player.transform.position);
+        if (agent.remainingDistance == 0)
         {
-
+            AtStep(distance);
         }
 
-        float distance = Vector3.Distance(transform.position, Player.transform.position);
         if (distance < 2)
         {
             ChargeBattery();
@@ -41,10 +42,12 @@ public class Birgit : MonoBehaviour
         if (Player.gameObject.GetComponent<CharacterAnimation>().isCrouching == true)
         {
             GetComponent<CharacterAnimation>().isCrouching = true;
+            isCrouched = true;
         }
         else
         {
             GetComponent<CharacterAnimation>().isCrouching = false;
+            isCrouched = false;
         }
 
         if (Player.gameObject.GetComponent<CharacterAnimation>().isCrouching == false)
@@ -63,8 +66,41 @@ public class Birgit : MonoBehaviour
 
     }
 
-    void AtStep()
+    void AtStep(float distance)
     {
+        Debug.Log("Perillä");
+        //Wait for the player
+        if (distance < 2 && !isGenerating)
+        {
+            isGenerating = true;
+            StartCoroutine(WaitForPlayer());
+        }
+    }
 
+    IEnumerator GetUp()
+    {
+        yield return new WaitForSeconds(4.5f);
+    }
+    IEnumerator WaitForPlayer()
+    {
+        Debug.Log("Laskee viiteen");
+        yield return new WaitForSeconds(5);
+        if (!isCrouched)
+        {
+            yield return new WaitForSeconds(4.5f);
+            agent.SetDestination(Steps[stepIndex].position);
+            stepIndex++;
+
+            Debug.Log("Uusimääränpää " + stepIndex);
+
+            if (agent.remainingDistance > 0)
+            {
+                isGenerating = false;
+            }
+        }
+        else
+        {
+            isGenerating = false;
+        }
     }
 }
